@@ -1,0 +1,17 @@
+-- Create TABLE CATEGORY
+CREATE TABLE IF NOT EXISTS CATEGORY(
+    id        INTEGER PRIMARY KEY,
+    name      VARCHAR(100) NOT NULL,
+    status    BOOLEAN NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS PRODUCT(
+    id        INTEGER PRIMARY KEY,
+    name      VARCHAR(100) NOT NULL,
+    category_id INTEGER,
+    stock     INTEGER NOT NULL,
+    FOREIGN KEY (category_id) REFERENCES CATEGORY(id)
+);
+
+

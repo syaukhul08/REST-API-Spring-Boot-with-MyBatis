@@ -7,12 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Product {
-
+public class Category {
     private int id;
     private String name;
-    private int categoryId;
-    private int stock;
-    private Category category;
+    private boolean status;
 }
-
